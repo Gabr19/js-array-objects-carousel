@@ -12,13 +12,13 @@ main{
     justify-content: center;
 }
 
-.container{
-    height: 100px;
-    width: 200px;
+#container{
+    height: 70%;
+    width: 70%;
     background-color: aqua;
 }
 
-.container > * {
+#container > * {
     height: 100%;
     width: 100%;
     object-fit: cover;
