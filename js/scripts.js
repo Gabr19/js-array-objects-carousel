@@ -22,18 +22,16 @@ const images = [
     }
 ];
 
-const arrImg = []
 
 
 
-console.log(arrImg);
+ let cont = document.getElementById('container')
+ 
+
+ for(let i = 0 ; i < images.length ; i++){
+    cont.innerHTML += '<img src="'+ images[i].image + '" />'
+ } 
 
 
- for (let i = 0 ; i < images.length ; i++){
-    for (let i of images) {
-        arrImg.push(i);
-    }
-
- }
 
 
