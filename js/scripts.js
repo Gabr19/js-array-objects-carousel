@@ -32,6 +32,13 @@ const images = [
     cont.innerHTML += '<img src="'+ images[i].image + '" />'
  } 
 
+ 
+ for(let i = 0 ; i < images.length ; i++){
+    cont.append = images[i][text]
+
+ } 
+
+
 
 
 
