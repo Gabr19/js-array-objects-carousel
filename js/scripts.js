@@ -22,21 +22,43 @@ const images = [
     }
 ];
 
+const slidesContainer = document.querySelector('.slides')
+const thumbnailsContainer = document.querySelector('.thumbnails')
+let currentSlide = 0;
 
+images.forEach((singleImage) =>{
+    const newSlide = document.createElement('div')
+    newSlide.classList.add('slide')
+    newSlide.innerHTML = `
+                    <img src="${singleImage.image}" alt="${singleImage.title}">
+                    <div class="texts">
+                        <h3>    
+                        ${singleImage.title}    
+                        </h3>
+                        <p>
+                        ${singleImage.text}
+                        </p>
+                    </div>`;
 
+                    slidesContainer.append(newSlide);
 
- let cont = document.getElementById('container')
- 
+    const newThumbnail = document.createElement('div');
+    newThumbnail.classList.add('thumbnail')
+    newThumbnail.style.height = (100 / images.length) + '%'
+    newThumbnail.innerHTML = `
+                    <img src="${singleImage.image}" alt="${singleImage.title}">
+                    `;
 
- for(let i = 0 ; i < images.length ; i++){
-    cont.innerHTML += '<img src="'+ images[i].image + '" />'
- } 
+                    thumbnailsContainer.append(newThumbnail);
+}
 
- 
- for(let i = 0 ; i < images.length ; i++){
-    cont.append = images[i][text]
+);
 
- } 
+const allSlide = document.querySelectorAll('.slide')
+allSlide[currentSlide].classList.add('active');
+
+const allThumbnail = document.querySelectorAll('.thumbnail')
+allThumbnail[currentSlide].classList.add('active');
 
 
 
